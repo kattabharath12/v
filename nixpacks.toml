@@ -1,8 +1,11 @@
 [phases.setup]
-cmds = ["npm install --legacy-peer-deps", "npx prisma generate"]
+cmds = [
+  "npm install --legacy-peer-deps",
+  "npx prisma generate"
+]
 
 [phases.build]
 cmds = ["npm run build"]
 
 [start]
-cmd = "npx prisma migrate deploy && npm star
+cmd = "npx prisma migrate deploy && npm start"
