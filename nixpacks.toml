@@ -1,11 +1,5 @@
 [phases.install]
 cmds = ["npm install --legacy-peer-deps"]
 
-[phases.setup]
-cmds = ["npx prisma generate"]
-
-[phases.build]
-cmds = ["npm run build"]
-
 [start]
-cmd = "npx prisma migrate deploy && npm start"
+cmd = "npm run railway:star
