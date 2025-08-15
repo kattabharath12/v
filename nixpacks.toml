@@ -2,4 +2,4 @@
 cmds = ["npm install --legacy-peer-deps"]
 
 [start]
-cmd = "npm run railway:star
+cmd = "npm run railway:start"
