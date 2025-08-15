@@ -3,18 +3,18 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npx prisma generate && next build",
     "start": "next start -p ${PORT:-3000}",
+    "railway:start": "npm run build && npx prisma migrate deploy && npm start",
     "lint": "next lint",
-    "postinstall": "prisma generate",
+    "postinstall": "npx prisma generate",
     "db:migrate": "prisma migrate dev",
     "db:migrate:deploy": "prisma migrate deploy",
     "db:generate": "prisma generate",
     "db:studio": "prisma studio",
-    "db:seed": "tsx prisma/seed.ts",
-    "railway:deploy": "npx prisma migrate deploy && npm start",
-    "railway:build": "npm ci && npx prisma generate && npm run build"
+    "db:seed": "tsx prisma/seed.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
